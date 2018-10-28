@@ -1,0 +1,35 @@
+
+	<html>
+	<head>
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	</head>
+
+	<body background="images/bg1.jpg"   ng-app="homepage">
+	<div ng-controller="searchctrl">
+		<p style="font-size: 25px; font-family: Pristina;position: relative;left:30% ">Ready to know about some cool stuff ? Search below </p>
+		<input type="search" placeholder="Search Here" id="searchitem" class="searchitem" ng-model="searchitem">
+		<button  class="btn button searchitem " ng-click="getSearchResult()"> Show Result </button>
+		<div class="homebody">
+
+			<p id="errormsg"></p>
+			<p><b>{{description}}</b></p>
+			<p>{{searchDescription}}</p>
+			<p><b>{{wikiheading}}</b></p>
+			<p><a href="{{wiki}}"> {{wiki}}</a> </p>
+			<p><img  ng-src="{{searchimage}} "></p>
+
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script src="js/controllers/MainController.js"></script>
+
+	</body>
+
+</html>
